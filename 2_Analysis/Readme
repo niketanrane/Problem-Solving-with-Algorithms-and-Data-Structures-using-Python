@@ -1,1 +1,17 @@
 Chapter 2 : Analysis
+
+2.1. Objectives
+2.2. What Is Algorithm Analysis?
+2.3. Big-O Notation
+2.4. An Anagram Detection Example
+2.4.1. Solution 1: Checking Off
+2.4.2. Solution 2: Sort and Compare
+2.4.3. Solution 3: Brute Force
+2.4.4. Solution 4: Count and Compare
+2.5. Performance of Python Data Structures
+2.6. Lists
+2.7. Dictionaries
+2.8. Summary
+2.9. Key Terms
+2.10. Discussion Questions
+2.11. Programming Exercises
