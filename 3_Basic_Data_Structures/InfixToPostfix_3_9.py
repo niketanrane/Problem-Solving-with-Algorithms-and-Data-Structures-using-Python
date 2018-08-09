@@ -54,6 +54,35 @@ def infixToPostfix(infixexpr):
         output.append(st.pop())
     return output
 
+def postfixEval(postfixExpr):
+    postfixExpr = postfixExpr.split()
+    st = Stack()
+    for op in postfixExpr:
+        if op in "*/+-^":
+            op1 = st.pop()
+            op2 = st.pop()
+            ans = doMath(op, op2, op1)  # here we are pasing in opposite order since division expect 15/5 rather than 5/15. -> 15 5 / Should be 15 / 5
+            st.push(ans)
+        else:
+            st.push(int(op))
+
+    return st.pop()
+
+def doMath(op, op1, op2):
+    if op == "^":
+        return op1 ** op2
+    elif op == "*":
+        return op1 * op2
+    elif op == "/":
+        return op1 / op2
+    elif op == "+":
+        return op1 + op2
+    else:
+        return op1 - op2
+
+
+
 print(infixToPostfix("A * B + C * D"))
 print(infixToPostfix("( A + B ) * C - ( D - E ) * ( F + G )"))
 print(infixToPostfix("( A + B ) * ( C + D )"))
+print(postfixEval('134 30 *'))
