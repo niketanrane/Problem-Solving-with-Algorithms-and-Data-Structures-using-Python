@@ -30,13 +30,16 @@ class Stack:
 def parChecker(symbolString):
     st = Stack()
     for ch in symbolString:
-        if ch == "(":
+        if ch in "({[":
             st.push(ch)
-        elif ch == ")":
+        elif ch in ")}]":
             if st.isEmpty():
                 break
             else:
-                st.pop()
+                top = st.pop()
+                if not matches(top, ch):
+                    break
+
     else:
         # no break
         if not st.isEmpty():
@@ -44,4 +47,9 @@ def parChecker(symbolString):
         return True
     return False
 
-print(parChecker("(())(54ghh45t5re())(())"))
+def matches(c1, c2):
+    opening = "([{"
+    closing = ")]}"
+    return opening.index(c1) == closing.index(c2)
+
+print(parChecker("()"))
