@@ -27,16 +27,21 @@ class Stack:
     def size(self):
         return len(self.items)
 
-def decToBin(n):
+def decToBase(n, base):
+    digits = "0123456789ABCDEF"
+
     st = Stack()
     while n > 0:
-        st.push(n%2)
-        n //= 2
+        st.push(n % base)
+        n //= base
 
     binary = ''
     while not st.isEmpty():
-        binary += str(st.pop())
+        binary += str(digits[st.pop()])
 
     return binary
 
-print(decToBin(42))
+print("Binary: ", decToBase(42, 2))
+print("Octal: ", decToBase(42, 8))
+print("Hexadecimal: ", decToBase(42, 16))
+print("Decimal: ", decToBase(42, 10))
