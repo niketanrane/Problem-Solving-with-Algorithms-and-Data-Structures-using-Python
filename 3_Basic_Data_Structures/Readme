@@ -1,0 +1,37 @@
+#Chapter 3 : Basic Data Structures
+3.1. Objectives
+3.2. What Are Linear Structures?
+3.3. What is a Stack?
+3.4. The Stack Abstract Data Type
+3.5. Implementing a Stack in Python
+3.6. Simple Balanced Parentheses
+3.7. Balanced Symbols (A General Case)
+3.8. Converting Decimal Numbers to Binary Numbers
+3.9. Infix, Prefix and Postfix Expressions
+3.9.1. Conversion of Infix Expressions to Prefix and Postfix
+3.9.2. General Infix-to-Postfix Conversion
+3.9.3. Postfix Evaluation
+3.10. What Is a Queue?
+3.11. The Queue Abstract Data Type
+3.12. Implementing a Queue in Python
+3.13. Simulation: Hot Potato
+3.14. Simulation: Printing Tasks
+3.14.1. Main Simulation Steps
+3.14.2. Python Implementation
+3.14.3. Discussion
+3.15. What Is a Deque?
+3.16. The Deque Abstract Data Type
+3.17. Implementing a Deque in Python
+3.18. Palindrome-Checker
+3.19. Lists
+3.20. The Unordered List Abstract Data Type
+3.21. Implementing an Unordered List: Linked Lists
+3.21.1. The Node Class
+3.21.2. The Unordered List Class
+3.22. The Ordered List Abstract Data Type
+3.23. Implementing an Ordered List
+3.23.1. Analysis of Linked Lists
+3.24. Summary
+3.25. Key Terms
+3.26. Discussion Questions
+3.27. Programming Exercises
