@@ -20,4 +20,10 @@ class Queue:
         return len(self.items) == 0
 
 
-
+q = Queue()
+q.enqueue(4)
+q.enqueue("Niketan")
+print(q.size())
+print(q.dequeue())
+print(q.dequeue())
+print(q.isEmpty())
