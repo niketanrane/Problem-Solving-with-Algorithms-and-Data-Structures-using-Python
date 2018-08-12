@@ -42,6 +42,6 @@ def decToBase(n, base):
     return binary
 
 print("Binary: ", decToBase(42, 2))
-print("Octal: ", decToBase(42, 8))
-print("Hexadecimal: ", decToBase(42, 16))
+print("Octal: ", decToBase(25, 8))
+print("Hexadecimal: ", decToBase(256, 16))
 print("Decimal: ", decToBase(42, 10))

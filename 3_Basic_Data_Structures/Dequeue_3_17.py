@@ -17,11 +17,12 @@ class Dequeue:
         self.items.append(value)
 
     def addRear(self, value):
-        self.itmes.insert(0, value)
+        self.items.insert(0, value)
 
     def removeFront(self):
         return self.items.pop()
 
     def removeRear(self):
         return self.items.pop(0)
+
 
