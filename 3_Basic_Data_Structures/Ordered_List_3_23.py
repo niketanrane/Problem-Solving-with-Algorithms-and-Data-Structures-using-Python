@@ -20,10 +20,7 @@ class Node:
     def setnext(self, newNext):
         self.next = newNext
 
-#temp = Node(93)
-#print(temp.getData())
-
-class UnorderedList:
+class OrderedList:
     def __init__(self):
         #The list class will only have one field. The reference to the first node
         # of list. It does not hold any data
@@ -33,16 +30,22 @@ class UnorderedList:
         return self.head is None
 
     def add(self, newdata):
-        if self.head is None:
+        current = self.head
+        previous = None
+        while current is not None:
+            if current.data > newdata:
+                break
+            previous = current
+            current = current.next
+
+        if previous == None:
             newNode = Node(newdata)
+            newNode.next = self.head
             self.head = newNode
         else:
-            cur = self.head
-            while cur.next is not None:
-                #print(cur.data)
-                cur = cur.next
             newNode = Node(newdata)
-            cur.setnext(newNode)
+            newNode.next = previous.next
+            previous.next = newNode
 
     def traverse(self):
         cur = self.head
@@ -68,6 +71,8 @@ class UnorderedList:
         while cur is not None:
             if cur.data == searchItem:
                 return pos
+            elif cur.data > searchItem:
+                break
             pos += 1
             cur = cur.next
         return -1
@@ -85,9 +90,7 @@ class UnorderedList:
             previous.next = current.next
 
 
-
-mylist = UnorderedList()
-
+mylist = OrderedList()
 mylist.add(31)
 mylist.add(77)
 mylist.add(17)
@@ -98,15 +101,3 @@ mylist.add(54)
 print(mylist.size())
 print(mylist.search(93))
 print(mylist.search(100))
-
-mylist.add(100)
-print(mylist.search(100))
-print(mylist.size())
-
-mylist.remove(54)
-print(mylist.size())
-mylist.remove(93)
-print(mylist.size())
-mylist.remove(31)
-print(mylist.size())
-print(mylist.search(93))
