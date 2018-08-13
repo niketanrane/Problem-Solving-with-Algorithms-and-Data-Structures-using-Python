@@ -2,7 +2,6 @@ __author__ = "niketan"
 
 def sequentialSearchOrdered(orderedList, item):
     '''
-
     :param aList: Ordered List in which to search
     :param item: Item to search
     :return: boolean, if item is present or not
